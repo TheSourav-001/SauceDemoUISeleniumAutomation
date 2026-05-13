@@ -1,4 +1,5 @@
 package pages;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -9,6 +10,7 @@ public class LoginPage {
     By passwordFiled = By.xpath("//*[@id=\"password\"]");
     By loginButton = By.xpath("//*[@id=\"login-button\"]");
     By errorMessage = By.xpath("//*[@id=\"login_button_container\"]/div/form/div[3]");
+
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;

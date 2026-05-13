@@ -7,10 +7,9 @@ import java.util.Properties;
 public class ConfigReader {
     private static Properties properties;
 
-    // Static block: ক্লাসটা কল হওয়ার সাথে সাথেই ফাইলটা মেমোরিতে লোড হয়ে যাবে
     static {
         try {
-            // আপনার config.properties ফাইলের লোকেশন
+
             String filePath = "src/test/resources/config.properties";
             FileInputStream file = new FileInputStream(filePath);
 
@@ -23,7 +22,6 @@ public class ConfigReader {
         }
     }
 
-    // এই মেথড দিয়ে আমরা যেকোনো ডেটা চাবো (যেমন: getProperty("baseUrl"))
     public static String getProperty(String key) {
         return properties.getProperty(key);
     }
